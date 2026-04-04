@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "O motor da inovação na sociedade",
 };
 
+import Navbar from "@/components/ui/Navbar";
+import { getDictionary } from "@/i18n/get-dictionary";
+
 export default async function RootLayout({
   children,
   params,
@@ -25,9 +28,15 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
+  const dict = await getDictionary(lang as "en" | "pt");
+
   return (
     <html lang={lang} className={`${inter.variable} ${manrope.variable} dark`}>
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+      </head>
       <body className="bg-background text-on_surface font-sans antialiased selection:bg-primary selection:text-on_primary">
+        <Navbar lang={lang} dict={dict.landing || {}} />
         {children}
       </body>
     </html>

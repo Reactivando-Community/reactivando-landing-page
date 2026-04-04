@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./apresentacoes.module.css";
 import { getDictionary, Locale } from "@/i18n/get-dictionary";
+import BackButton from "@/components/ui/BackButton";
 
 export default async function Apresentacoes({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -9,10 +10,7 @@ export default async function Apresentacoes({ params }: { params: Promise<{ lang
   return (
     <main className={styles.main}>
       <div className={styles.header}>
-        <Link href={`/${lang}`} className={styles.backLink}>
-          {dict.presentations.back}
-        </Link>
-        <h1 className={styles.title}>{dict.presentations.title}</h1>
+        <h1 className={`${styles.title} mt-8`}>{dict.presentations.title}</h1>
         <p className={styles.description}>
           {dict.presentations.description}
         </p>
