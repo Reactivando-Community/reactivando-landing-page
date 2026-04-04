@@ -429,14 +429,15 @@ export const siteEm30MinutosSlides: PresentationSlide[] = [
   {
     id: 4,
     image: '/presentation/slide-4.jpg',
-    title: "As 4 ferramentas",
+    title: "As 5 ferramentas",
     period: "A Stack",
     speech: "Uma stack enxuta e absurdamente poderosa.",
     bullets: [
       "Stitch (prototipação)",
       "Antigravity (geração e automação)",
       "Next.js (estrutura e performance)",
-      "Firebase (deploy)"
+      "GitHub (versionamento e colaboração)",
+      "Vercel (deploy)"
     ],
     keyword: "O ARSENAL",
     presentationHint: "Exibir logos ou os nomes grandes."
@@ -501,12 +502,12 @@ export const siteEm30MinutosSlides: PresentationSlide[] = [
     id: 9,
     image: '/presentation/slide-9.jpg',
     title: "Colocando no ar em minutos",
-    period: "Passo 4: Firebase",
-    speech: "Deploy virou um botão.",
+    period: "Passo 4: Vercel",
+    speech: "Deploy virou um git push.",
     bullets: [
-      "Deploy simples",
-      "HTTPS automático",
-      "Escalável"
+      "Deploy automático via Git",
+      "HTTPS e domínio customizado instantâneo",
+      "Integração nativa com Next.js"
     ],
     keyword: "PUBLICAÇÃO",
     presentationHint: "Foguete ou ícone de nuvem."
@@ -521,7 +522,8 @@ export const siteEm30MinutosSlides: PresentationSlide[] = [
       "1. Ideia → Stitch",
       "2. Design → Antigravity",
       "3. Código → Next.js",
-      "4. Deploy → Firebase"
+      "4. Repositório → GitHub",
+      "5. Deploy → Vercel"
     ],
     keyword: "O MÉTODO",
     presentationHint: "Gráfico horizontal mostrando o fluxo claro, passo a passo."
