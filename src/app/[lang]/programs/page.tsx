@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./apresentacoes.module.css";
 import { getDictionary, Locale } from "@/i18n/get-dictionary";
-import BackButton from "@/components/ui/BackButton";
+import { presentationsRegistry } from "@/data/presentation";
 
 export default async function Apresentacoes({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -17,7 +17,22 @@ export default async function Apresentacoes({ params }: { params: Promise<{ lang
       </div>
 
       <div className={styles.grid}>
-        <Link href="/apresentacoes/como-furar-a-bolha/index.html" className={styles.card}>
+        {Object.entries(presentationsRegistry).map(([slug, presentation]) => (
+            <Link key={slug} href={`/${lang}/presentations/${slug}`} className={styles.card}>
+              <div className={styles.cardGlow} />
+              <div className={styles.cardContent}>
+                <span className={styles.tag}>{dict.presentations.tag_tech}</span>
+                <h2 className={styles.cardTitle}>{presentation.title}</h2>
+                <p className={styles.cardDesc}>
+                  {presentation.description}
+                </p>
+                <span className={styles.readMore}>{dict.presentations.read_more}</span>
+              </div>
+            </Link>
+        ))}
+
+        {/* Keeping old legacy hardcoded presentation link if they still want it */}
+        <Link href={`/${lang}/apresentacoes/como-furar-a-bolha/index.html`} className={styles.card}>
           <div className={styles.cardGlow} />
           <div className={styles.cardContent}>
             <span className={styles.tag}>{dict.presentations.tag_tech}</span>

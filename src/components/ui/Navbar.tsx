@@ -9,6 +9,8 @@ export default function Navbar({ lang, dict }: { lang: string, dict: any }) {
   
   const isHome = pathname === `/${lang}` || pathname === `/${lang}/`;
 
+  if (pathname.includes('/presentations')) return null;
+
   return (
     <nav className="fixed z-50 flex justify-between items-center px-4 md:px-8 py-3 md:py-4 bottom-8 left-4 right-4 rounded-[2rem] md:bottom-auto md:top-6 md:left-1/2 md:-translate-x-1/2 md:w-[calc(100%-3rem)] md:max-w-6xl md:rounded-full bg-background/50 backdrop-blur-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] border border-primary/20 transition-all duration-300">
       
