@@ -581,14 +581,14 @@ export const presentationsRegistry: Record<string, { title: string, description:
   "minha-jornada": {
     title: "De Desenvolvedor a Founder",
     description: "A linha do tempo: do primeiro Startup Weekend até o Exit da startup.",
-    thumbnail: "/presentation/slide-1.jpg",
+    thumbnail: "/startup-1-m-thumb.jpeg",
     slides: timelineSlides,
     conclusion: presentationConclusion
   },
   "site-em-30-minutos": {
     title: "Como criar um super site em 30 minutos",
     description: "Veja um site sendo criado do zero, do protótipo ao deploy, em tempo real com ferramentas modernas e Inteligência Artificial.",
-    thumbnail: "/presentation/slide-4.jpg",
+    thumbnail: "/thumb-super-site.jpeg",
     slides: siteEm30MinutosSlides,
     conclusion: siteEm30MinutosConclusion
   }
