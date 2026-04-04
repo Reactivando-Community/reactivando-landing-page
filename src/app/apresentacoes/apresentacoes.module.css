@@ -1,0 +1,130 @@
+.main {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 4rem;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: var(--primary);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #64748b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 216, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: var(--primary);
+  filter: blur(80px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card:hover .cardGlow {
+  opacity: 0.15;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  background: rgba(0, 216, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.cardDesc {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.readMore {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--secondary);
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .readMore {
+  transform: translateX(5px);
+}
