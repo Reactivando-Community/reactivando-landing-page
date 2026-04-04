@@ -360,12 +360,237 @@ export const presentationConclusion = {
   cta: "A sua jornada já começou!!!"
 };
 
-export const presentationsRegistry: Record<string, { title: string, description: string, slides: PresentationSlide[], conclusion: any }> = {
+export const siteEm30MinutosSlides: PresentationSlide[] = [
+  {
+    id: 0,
+    type: 'intro',
+    image: '/pedro.JPG',
+    title: "Quem sou eu",
+    period: "Apresentação",
+    context: {
+      university: "Dev há >10 anos",
+      work: "Produtos Digitais & Fintechs",
+      project: "Starts & Comunidades"
+    },
+    speech: "Eu não só desenvolvo software — eu construo produtos que resolvem problemas reais.",
+    bullets: [
+      "Pedro Goiânia",
+      "Desenvolvedor de software há mais de 10 anos",
+      "Especialista em produtos digitais e fintechs",
+      "Vencedor de 3 hackathons (incluindo Uber)",
+      "Organizador de comunidades e eventos de tecnologia",
+      "Criador de startups e produtos digitais"
+    ],
+    keyword: "EXPERIÊNCIA",
+    presentationHint: "Fundo escuro moderno, tipografia grande e impactante, destacando a frase."
+  },
+  {
+    id: 1,
+    image: '/presentation/slide-1.jpg',
+    title: "Como criar um super site em 30 minutos",
+    period: "Abertura",
+    speech: "Sem enrolação. Sem teoria. Só execução.",
+    bullets: [
+      "Hoje você vai ver um site sendo criado do zero",
+      "Do protótipo ao deploy",
+      "Ao vivo (ou quase isso)"
+    ],
+    keyword: "HOOK",
+    presentationHint: "Visual tecnológico, foco total na frase central."
+  },
+  {
+    id: 2,
+    image: '/presentation/slide-2.jpg',
+    title: "Criar um site ainda é lento demais",
+    period: "O Problema",
+    speech: "E se isso pudesse ser feito em minutos?",
+    bullets: [
+      "Demora dias ou semanas",
+      "Precisa de várias habilidades",
+      "Muito esforço para validar ideias"
+    ],
+    keyword: "A DOR",
+    presentationHint: "Impacto visual da demora e complexidade."
+  },
+  {
+    id: 3,
+    image: '/presentation/slide-3.jpg',
+    title: "A nova forma de criar produtos",
+    period: "A Solução",
+    speech: "Você não precisa mais fazer tudo — só precisa saber orquestrar.",
+    bullets: [
+      "IA + ferramentas modernas",
+      "Automação do processo",
+      "Velocidade absurda"
+    ],
+    keyword: "A REVOLUÇÃO",
+    presentationHint: "Transição suave para uma estética futurista."
+  },
+  {
+    id: 4,
+    image: '/presentation/slide-4.jpg',
+    title: "As 4 ferramentas",
+    period: "A Stack",
+    speech: "Uma stack enxuta e absurdamente poderosa.",
+    bullets: [
+      "Stitch (prototipação)",
+      "Antigravity (geração e automação)",
+      "Next.js (estrutura e performance)",
+      "Firebase (deploy)"
+    ],
+    keyword: "O ARSENAL",
+    presentationHint: "Exibir logos ou os nomes grandes."
+  },
+  {
+    id: 5,
+    image: '/presentation/slide-5.jpg',
+    title: "Do zero ao design em minutos",
+    period: "Passo 1: Stitch",
+    speech: "Antes você precisava de um designer. Agora você precisa de uma ideia.",
+    bullets: [
+      "Geração de interfaces",
+      "Prototipação rápida",
+      "Validação visual imediata"
+    ],
+    keyword: "PROTOTIPAÇÃO",
+    presentationHint: "Animação de wireframe para interface bela."
+  },
+  {
+    id: 6,
+    image: '/presentation/slide-6.jpg',
+    title: "Transformando design em código",
+    period: "Passo 2: Antigravity",
+    speech: "Você descreve — ele constrói.",
+    bullets: [
+      "Geração automática de código",
+      "Estrutura pronta",
+      "Aceleração do desenvolvimento"
+    ],
+    keyword: "GERAÇÃO DO CÓDIGO",
+    presentationHint: "Chuva de código limpo."
+  },
+  {
+    id: 7,
+    image: '/presentation/slide-7.jpg',
+    title: "O segredo está na conexão",
+    period: "Integração (MCP)",
+    speech: "As ferramentas são boas. Mas juntas, são absurdas.",
+    bullets: [
+      "Integração Stitch + Antigravity via MCP",
+      "Fluxo automatizado",
+      "Menos trabalho manual"
+    ],
+    keyword: "A MÁGICA",
+    presentationHint: "Cabos ou fluxos conectando os ecossistemas, cores brilhantes."
+  },
+  {
+    id: 8,
+    image: '/presentation/slide-8.jpg',
+    title: "Transformando em produto real",
+    period: "Passo 3: Next.js",
+    speech: "Aqui deixa de ser um protótipo… e vira produto.",
+    bullets: [
+      "SEO otimizado",
+      "Alta performance",
+      "Estrutura profissional"
+    ],
+    keyword: "ESTRUTURA",
+    presentationHint: "Fundo com código moderno."
+  },
+  {
+    id: 9,
+    image: '/presentation/slide-9.jpg',
+    title: "Colocando no ar em minutos",
+    period: "Passo 4: Firebase",
+    speech: "Deploy virou um botão.",
+    bullets: [
+      "Deploy simples",
+      "HTTPS automático",
+      "Escalável"
+    ],
+    keyword: "PUBLICAÇÃO",
+    presentationHint: "Foguete ou ícone de nuvem."
+  },
+  {
+    id: 10,
+    image: '/presentation/slide-10.jpg',
+    title: "Do zero ao online",
+    period: "O Fluxo Completo",
+    speech: "O caminho mais curto entre a ideia e o usuário.",
+    bullets: [
+      "1. Ideia → Stitch",
+      "2. Design → Antigravity",
+      "3. Código → Next.js",
+      "4. Deploy → Firebase"
+    ],
+    keyword: "O MÉTODO",
+    presentationHint: "Gráfico horizontal mostrando o fluxo claro, passo a passo."
+  },
+  {
+    id: 11,
+    image: '/presentation/slide-11.jpg',
+    title: "Vamos construir ao vivo",
+    period: "Demonstração",
+    speech: "Agora é onde tudo acontece.",
+    bullets: [
+      "Criar uma landing page",
+      "Gerar design",
+      "Gerar código",
+      "Publicar"
+    ],
+    keyword: "SHOWTIME",
+    presentationHint: "Luzes que se focam num terminal."
+  },
+  {
+    id: 12,
+    image: '/presentation/slide-12.jpg',
+    title: "O jogo mudou",
+    period: "Insight principal",
+    speech: "Quem executa mais rápido, vence.",
+    bullets: [
+      "Não é sobre saber programar",
+      "É sobre saber usar ferramentas",
+      "Velocidade virou vantagem competitiva"
+    ],
+    keyword: "VANTAGEM",
+    presentationHint: "Foco na agilidade."
+  },
+  {
+    id: 13,
+    image: '/presentation/slide-13.jpg',
+    title: "Nunca foi tão fácil criar",
+    period: "Fechamento",
+    speech: "Se você consegue pensar, você consegue construir.",
+    bullets: [
+      "Barreiras diminuíram",
+      "Qualquer ideia pode virar produto",
+      "O melhor momento é agora"
+    ],
+    keyword: "HORA DE CRIAR",
+    presentationHint: "Palavras grandiosas, fechamento glorioso com a frase final bem destacada."
+  }
+];
+
+export const siteEm30MinutosConclusion = {
+  image: '/presentation/conclusion.jpg',
+  quote: "Se você consegue pensar, você consegue construir.",
+  cta: "Chegou a hora de executar."
+};
+
+export const presentationsRegistry: Record<string, { title: string, description: string, thumbnail?: string, slides: PresentationSlide[], conclusion: any }> = {
   "minha-jornada": {
     title: "De Desenvolvedor a Founder",
     description: "A linha do tempo: do primeiro Startup Weekend até o Exit da startup.",
+    thumbnail: "/presentation/slide-1.jpg",
     slides: timelineSlides,
     conclusion: presentationConclusion
+  },
+  "site-em-30-minutos": {
+    title: "Como criar um super site em 30 minutos",
+    description: "Veja um site sendo criado do zero, do protótipo ao deploy, em tempo real com ferramentas modernas e Inteligência Artificial.",
+    thumbnail: "/presentation/slide-4.jpg",
+    slides: siteEm30MinutosSlides,
+    conclusion: siteEm30MinutosConclusion
   }
 };
 

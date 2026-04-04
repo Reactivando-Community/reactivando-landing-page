@@ -117,11 +117,13 @@ export default function PresentationPlayer({ slides, conclusion }: { slides: Pre
            <div className="relative z-10 max-w-3xl text-right mt-16 md:mt-0 flex flex-col items-end">
               <h1 className="text-5xl md:text-8xl font-display font-extrabold tracking-tight mb-8 drop-shadow-2xl">{slide.title}</h1>
               
+              {slide.context && (
               <div className="flex flex-wrap gap-3 justify-end mb-16 max-w-xl">
-                <span className="px-4 py-2 bg-primary/20 text-primary border border-primary/30 rounded-full font-mono text-xs md:text-sm">{slide.context.university}</span>
-                <span className="px-4 py-2 bg-tertiary/20 text-tertiary border border-tertiary/30 rounded-full font-mono text-xs md:text-sm">{slide.context.work}</span>
-                <span className="px-4 py-2 bg-white/10 text-white border border-white/20 rounded-full font-mono text-xs md:text-sm font-bold">{slide.context.project}</span>
+                {slide.context.university && <span className="px-4 py-2 bg-primary/20 text-primary border border-primary/30 rounded-full font-mono text-xs md:text-sm">{slide.context.university}</span>}
+                {slide.context.work && <span className="px-4 py-2 bg-tertiary/20 text-tertiary border border-tertiary/30 rounded-full font-mono text-xs md:text-sm">{slide.context.work}</span>}
+                {slide.context.project && <span className="px-4 py-2 bg-white/10 text-white border border-white/20 rounded-full font-mono text-xs md:text-sm font-bold">{slide.context.project}</span>}
               </div>
+              )}
 
               <blockquote className="text-3xl md:text-5xl font-light italic leading-relaxed text-secondary/90 border-r-4 border-primary pr-6 md:pr-10 drop-shadow-lg">
                  "{slide.speech}"
@@ -206,6 +208,7 @@ export default function PresentationPlayer({ slides, conclusion }: { slides: Pre
                       {slide.title}
                   </h1>
 
+                  {slide.context && (
                   <div className="space-y-4 pt-6 border-t border-outline_variant/10">
                       <div>
                           <span className="text-[10px] uppercase tracking-widest text-secondary/50 font-bold block mb-1">Academia</span>
@@ -220,6 +223,7 @@ export default function PresentationPlayer({ slides, conclusion }: { slides: Pre
                           <p className="text-sm border-l-2 border-white pl-3 text-on_surface font-semibold">{slide.context.project || "-"}</p>
                       </div>
                   </div>
+                  )}
               </div>
 
               {/* Right side: Story & Bullets */}
@@ -228,6 +232,7 @@ export default function PresentationPlayer({ slides, conclusion }: { slides: Pre
                       "{slide.speech}"
                   </blockquote>
 
+                  {slide.bullets && slide.bullets.length > 0 && (
                   <ul className="space-y-4 text-base md:text-xl font-sans text-on_surface_variant">
                       {slide.bullets.map((bullet, idx) => (
                           <li key={idx} className="flex items-start gap-4">
@@ -236,12 +241,15 @@ export default function PresentationPlayer({ slides, conclusion }: { slides: Pre
                           </li>
                       ))}
                   </ul>
+                  )}
 
+                  {slide.learning && (
                   <div className="bg-surface_container_low p-6 rounded-2xl border border-outline_variant/10 mt-8 relative overflow-hidden group">
                       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="text-xs uppercase tracking-widest text-primary font-bold block mb-2">Aprendizado Chave</span>
                       <p className="font-semibold text-lg">{slide.learning}</p>
                   </div>
+                  )}
               </div>
           </div>
         </div>

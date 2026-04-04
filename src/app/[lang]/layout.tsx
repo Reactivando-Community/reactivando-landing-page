@@ -13,8 +13,33 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Reactivando",
-  description: "O motor da inovação na sociedade",
+  metadataBase: new URL('https://reactivando.io'),
+  title: {
+    template: '%s | Reactivando',
+    default: 'Reactivando | O motor da inovação na sociedade',
+  },
+  description: 'Descubra como a Reactivando fura a bolha da tecnologia, criando ecossistemas de inovação integrados com inteligência artificial e metodologias disruptivas.',
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://reactivando.io',
+    siteName: 'Reactivando',
+    images: [{
+      url: '/reactivando-horizontal.svg', // Assuming a logo or default OG image
+      width: 1200,
+      height: 630,
+      alt: 'Reactivando',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Reactivando | O motor da inovação na sociedade',
+    description: 'Descubra como a Reactivando fura a bolha da tecnologia, criando ecossistemas de inovação.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 import Navbar from "@/components/ui/Navbar";

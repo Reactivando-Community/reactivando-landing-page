@@ -1,11 +1,39 @@
 import { getDictionary } from '../../i18n/get-dictionary';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+type Props = {
+  params: Promise<{ lang: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  
+  if (lang === 'en') {
+    return {
+      title: 'Reactivando | The engine of innovation in society',
+      description: 'Fueling the next wave of tech innovation. Discover how Reactivando breaks the tech bubble, creating innovation ecosystems integrated with AI and disruptive methods.',
+      openGraph: {
+        title: 'Reactivando | Kinetic Innovation',
+        description: 'Fueling the next wave of tech innovation across society.',
+      }
+    };
+  }
+
+  // Default to PT
+  return {
+    title: 'Reactivando | O motor da inovação na sociedade',
+    description: 'Impulsionando a próxima onda de inovação tecnológica. Descubra como a Reactivando fura a bolha da tecnologia, criando ecossistemas de inovação.',
+    openGraph: {
+      title: 'Reactivando | O motor da inovação',
+      description: 'Impulsionando a próxima onda de inovação tecnológica na sociedade.',
+    }
+  };
+}
 
 export default async function Home({
   params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+}: Props) {
   const { lang } = await params;
   const dict = await getDictionary(lang as "en" | "pt");
   const landing = dict.landing || {};
