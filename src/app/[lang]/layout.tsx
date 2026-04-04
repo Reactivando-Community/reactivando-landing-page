@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
@@ -26,8 +26,10 @@ export default async function RootLayout({
 }>) {
   const { lang } = await params;
   return (
-    <html lang={lang} className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+    <html lang={lang} className={`${inter.variable} ${manrope.variable} dark`}>
+      <body className="bg-background text-on_surface font-sans antialiased selection:bg-primary selection:text-on_primary">
+        {children}
+      </body>
     </html>
   );
 }
