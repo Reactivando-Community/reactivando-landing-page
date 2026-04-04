@@ -1,24 +1,28 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import { getDictionary, Locale } from "@/i18n/get-dictionary";
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang as Locale);
+
   return (
     <main className={styles.main}>
       <div className={styles.hero}>
         <div className={styles.badge}>
           <span className={styles.badgeDot}></span>
-          Em construção
+          {dict.home.badge}
         </div>
         <h1 className={styles.title}>
-          Bem-vindo à <span className={styles.gradientText}>Reactivando</span>
+          {dict.home.welcome} <span className={styles.gradientText}>Reactivando</span>
         </h1>
         <p className={styles.description}>
-          O motor da inovação na sociedade. Um ecossistema focado em democratizar o poder da tecnologia.
+          {dict.home.description}
         </p>
         
         <div className={styles.actions}>
-          <Link href="/apresentacoes" className={styles.primaryButton}>
-            Ver Apresentações
+          <Link href={`/${lang}/apresentacoes`} className={styles.primaryButton}>
+            {dict.home.button_presentations}
           </Link>
           <a
             href="https://hubcommunity.io"
@@ -26,7 +30,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className={styles.secondaryButton}
           >
-            Conheça o Hub Community
+            {dict.home.button_hub}
           </a>
         </div>
       </div>

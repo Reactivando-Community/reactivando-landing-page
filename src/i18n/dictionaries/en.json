@@ -1,0 +1,18 @@
+{
+  "home": {
+    "badge": "Under construction",
+    "welcome": "Welcome to",
+    "description": "The engine of innovation in society. An ecosystem focused on democratizing the power of technology.",
+    "button_presentations": "View Presentations",
+    "button_hub": "Discover Hub Community"
+  },
+  "presentations": {
+    "back": "← Back to Home",
+    "title": "Presentations",
+    "description": "Explore our materials and lectures.",
+    "tag_tech": "Tech & Society",
+    "card_title_1": "Technology Communities",
+    "card_desc_1": "The first official presentation: The engine of innovation in society. Discover how Reactivando breaks the bubble and brings technology to everyone.",
+    "read_more": "View presentation →"
+  }
+}

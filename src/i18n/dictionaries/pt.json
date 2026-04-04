@@ -1,0 +1,18 @@
+{
+  "home": {
+    "badge": "Em construção",
+    "welcome": "Bem-vindo à",
+    "description": "O motor da inovação na sociedade. Um ecossistema focado em democratizar o poder da tecnologia.",
+    "button_presentations": "Ver Apresentações",
+    "button_hub": "Conheça o Hub Community"
+  },
+  "presentations": {
+    "back": "← Voltar para Home",
+    "title": "Apresentações",
+    "description": "Explore nossos materiais e palestras.",
+    "tag_tech": "Tech & Sociedade",
+    "card_title_1": "Comunidades de Tecnologia",
+    "card_desc_1": "A primeira apresentação oficial: O motor da inovação na sociedade. Conheça como a Reactivando fura a bolha e leva tecnologia para todos.",
+    "read_more": "Ver apresentação →"
+  }
+}
