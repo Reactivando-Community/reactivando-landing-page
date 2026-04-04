@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: 'https://reactivando.io',
     siteName: 'Reactivando',
     images: [{
-      url: '/reactivando-horizontal.svg', // Assuming a logo or default OG image
+      url: '/presentation/slide-4.jpg', // Using a high-res JPG for WhatsApp/social compatibility
       width: 1200,
       height: 630,
       alt: 'Reactivando',

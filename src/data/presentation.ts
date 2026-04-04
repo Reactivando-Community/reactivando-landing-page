@@ -365,7 +365,7 @@ export const siteEm30MinutosSlides: PresentationSlide[] = [
     id: 0,
     type: 'intro',
     image: '/pedro.JPG',
-    title: "Quem sou eu",
+    title: "Pedro Goiânia",
     period: "Apresentação",
     context: {
       university: "Dev há >10 anos",

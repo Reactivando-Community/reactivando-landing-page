@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: 'Reactivando | Kinetic Innovation',
         description: 'Fueling the next wave of tech innovation across society.',
+        images: ['/presentation/slide-4.jpg'],
       }
     };
   }
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: 'Reactivando | O motor da inovação',
       description: 'Impulsionando a próxima onda de inovação tecnológica na sociedade.',
+      images: ['/presentation/slide-4.jpg'],
     }
   };
 }
