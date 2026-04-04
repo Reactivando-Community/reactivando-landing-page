@@ -139,7 +139,7 @@ export default async function Home({
         </section>
       </main>
 
-      <footer className="bg-background py-12 px-8 border-t border-primary/15">
+      <footer className="bg-background pt-12 pb-32 md:pb-12 px-8 border-t border-primary/15">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-6">
             <img alt="Reactivando Logo" className="h-8 w-auto mb-4" src="/reactivando-horizontal.svg" />

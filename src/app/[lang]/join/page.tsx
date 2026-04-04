@@ -43,8 +43,11 @@ export default async function Cadastro({
 
         {/* Form Section */}
         <div className="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-16 bg-surface_dim">
-          <div className="w-full max-w-md space-y-8">
-            <div className="pt-8 pb-32 md:pb-0">
+          <div className="w-full max-w-md space-y-8 mt-8 md:mt-0">
+            <div className="md:hidden flex justify-center mb-6">
+              <img src="/reactivando-fav.svg" alt="Reactivando Icon" className="h-14 w-auto drop-shadow-[0_4px_12px_rgba(116,213,220,0.3)]" />
+            </div>
+            <div>
               <h2 className="text-3xl font-display font-extrabold tracking-tight text-on_surface">{t.form_title}</h2>
               <p className="text-secondary/80">{t.form_subtitle}</p>
             </div>
@@ -52,7 +55,7 @@ export default async function Cadastro({
             <div className="bg-secondary_container/30 border-l-4 border-primary p-5 rounded-xl flex gap-4 items-start shadow-ambient">
               <span className="material-symbols-outlined text-primary mt-1">info</span>
               <div className="text-sm leading-relaxed text-secondary_fixed">
-                <span dangerouslySetInnerHTML={{ __html: t.hub_warning?.replace('Hub Community', '<strong>Hub Community</strong>').replace('hubcommunity.io', '<span class=\"text-primary\">hubcommunity.io</span>') || '' }} />
+                <span dangerouslySetInnerHTML={{ __html: t.hub_warning?.replace('Hub Community', '<strong>Hub Community</strong>').replace('hubcommunity.io', '<a href="https://hubcommunity.io" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold">hubcommunity.io</a>') || '' }} />
               </div>
             </div>
             <form className="space-y-5">
@@ -94,7 +97,7 @@ export default async function Cadastro({
       </main>
       
       {/* Footer */}
-      <footer className="bg-background border-t border-primary/15 flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full">
+      <footer className="bg-background border-t border-primary/15 flex flex-col md:flex-row justify-between items-center px-12 pt-10 pb-32 md:pb-10 w-full">
         <div className="mb-4 md:mb-0">
           <span className="text-lg font-display font-bold text-secondary">{t.footer_title || 'The Kinetic Intelligence'}</span>
         </div>

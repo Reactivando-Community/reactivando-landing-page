@@ -17,7 +17,10 @@ export default async function Login({
           <div className="max-w-md w-full space-y-8">
             
             {/* Brand Identity */}
-            <div className="flex flex-col items-start gap-4 pt-8 md:pt-24 pb-24 md:pb-0">
+            <div className="flex flex-col items-start gap-4 pt-12 md:pt-0">
+              <div className="md:hidden mb-2">
+                <img src="/reactivando-fav.svg" alt="Reactivando Icon" className="h-14 w-auto drop-shadow-[0_4px_12px_rgba(116,213,220,0.3)]" />
+              </div>
               <div className="space-y-1">
                 <h1 className="font-display text-3xl font-bold tracking-tight text-on_surface">{dict.login?.welcome || 'Bem-vindo de volta'}</h1>
                 <p className="text-on_surface_variant">{dict.login?.welcome_subtitle || 'Acesse sua conta para continuar inovando.'}</p>
@@ -115,7 +118,7 @@ export default async function Login({
       </main>
       
       {/* Footer from JSON Blueprint */}
-      <footer className="bg-background w-full py-12 border-t border-outline_variant/10">
+      <footer className="bg-background w-full pt-12 pb-32 md:pb-12 border-t border-outline_variant/10">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
             <span className="text-lg font-semibold text-tertiary">Hub Community</span>
