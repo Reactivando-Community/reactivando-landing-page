@@ -46,33 +46,6 @@ export default async function Home({
   return (
     <>
       <main className="pb-24 md:pb-0">
-        {/* Reactivando Day announcement */}
-        <Link
-          href={`/${lang}/reactivando-day`}
-          className="group block mt-0 md:mt-24 border-y border-primary/30 bg-primary/[0.08] hover:bg-primary/[0.14] transition-colors relative z-30"
-        >
-          <div className="max-w-7xl mx-auto px-6 md:px-8 py-3 md:py-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
-            <span className="inline-flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse" />
-              <span className="text-[0.7rem] md:text-xs font-sans uppercase tracking-[0.25em] text-tertiary font-bold">
-                {lang === 'en' ? 'Save the date' : 'Save the date'}
-              </span>
-            </span>
-            <span className="hidden sm:block w-px h-4 bg-primary/30" />
-            <span className="text-sm md:text-base text-on_surface font-display font-semibold">
-              {lang === 'en'
-                ? 'Reactivando Day by AUVP · July 4th · Hub Goiás'
-                : 'Reactivando Day by AUVP · 04 de julho · Hub Goiás'}
-            </span>
-            <span className="inline-flex items-center gap-1 text-primary font-sans font-bold text-xs md:text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
-              {lang === 'en' ? 'Join the waitlist' : 'Entrar na lista de espera'}
-              <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">
-                arrow_forward
-              </span>
-            </span>
-          </div>
-        </Link>
-
         {/* Hero Section */}
         <section className="relative min-h-[85vh] flex items-center px-8 py-24 lg:py-32 overflow-hidden">
           {/* Rich Background */}

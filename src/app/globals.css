@@ -27,53 +27,6 @@ a {
   box-sizing: border-box;
 }
 
-/* Reactivando Day animations */
-@keyframes rd-fade-up {
-  from { opacity: 0; transform: translate3d(0, 24px, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
-}
-@keyframes rd-fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes rd-float {
-  0%, 100% { transform: translate3d(0, 0, 0); }
-  50% { transform: translate3d(0, -8px, 0); }
-}
-@keyframes rd-glow-pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.7; }
-}
-@keyframes rd-shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(200%); }
-}
-.rd-fade-up { animation: rd-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
-.rd-fade-up-d1 { animation: rd-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
-.rd-fade-up-d2 { animation: rd-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
-.rd-fade-up-d3 { animation: rd-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
-.rd-fade-up-d4 { animation: rd-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
-.rd-fade-in { animation: rd-fade-in 0.9s ease-out both; }
-.rd-float { animation: rd-float 6s ease-in-out infinite; }
-.rd-glow-pulse { animation: rd-glow-pulse 6s ease-in-out infinite; }
-.rd-shimmer { position: relative; overflow: hidden; }
-.rd-shimmer::after {
-  content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.08) 50%, transparent 70%);
-  transform: translateX(-100%);
-  animation: rd-shimmer 3.2s ease-in-out infinite;
-}
-.rd-tilt { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-.rd-tilt:hover { transform: translateY(-6px) rotate(-0.4deg); }
-@media (prefers-reduced-motion: reduce) {
-  .rd-fade-up, .rd-fade-up-d1, .rd-fade-up-d2, .rd-fade-up-d3, .rd-fade-up-d4,
-  .rd-fade-in, .rd-float, .rd-glow-pulse, .rd-shimmer::after, .rd-tilt {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
