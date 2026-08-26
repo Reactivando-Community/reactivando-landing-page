@@ -144,6 +144,9 @@ export default function PresentationPlayer({ slides, conclusion }: { slides: Pre
                 <div className="p-4 bg-white rounded-2xl shadow-ambient">
                   <img src={slide.qrCode.url} alt="QR Code" className="w-48 h-48 sm:w-64 sm:h-64 object-contain" />
                 </div>
+                {slide.qrCode.caption && (
+                  <span className="font-mono text-sm md:text-base font-bold tracking-widest uppercase text-on_surface_variant">{slide.qrCode.caption}</span>
+                )}
               </div>
               )}
            </div>
@@ -209,6 +212,24 @@ export default function PresentationPlayer({ slides, conclusion }: { slides: Pre
                  <div className="p-4 bg-white rounded-3xl shadow-ambient border-4 border-white/20">
                    <img src={slide.qrCode.url} alt="QR Code" className="w-56 h-56 md:w-80 md:h-80 object-contain" />
                  </div>
+               </div>
+               )}
+
+               {slide.qrCodes && slide.qrCodes.length > 0 && (
+               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-16">
+                 {slide.qrCodes.map((qr, idx) => (
+                   <div key={idx} className="flex flex-col items-center gap-4 animate-in fade-in zoom-in duration-700 fill-mode-both" style={{ animationDelay: `${700 + (idx * 300)}ms` }}>
+                     {qr.label && (
+                       <span className="text-base md:text-lg font-bold uppercase tracking-widest text-primary bg-primary/10 px-6 py-2 rounded-full">{qr.label}</span>
+                     )}
+                     <div className="p-4 bg-white rounded-3xl shadow-ambient border-4 border-white/20">
+                       <img src={qr.url} alt={qr.label ? `QR Code — ${qr.label}` : 'QR Code'} className="w-44 h-44 md:w-64 md:h-64 object-contain" />
+                     </div>
+                     {qr.caption && (
+                       <span className="font-mono text-sm md:text-base font-bold tracking-widest uppercase text-on_surface_variant">{qr.caption}</span>
+                     )}
+                   </div>
+                 ))}
                </div>
                )}
 

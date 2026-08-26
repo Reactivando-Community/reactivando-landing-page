@@ -39,7 +39,13 @@ export type PresentationSlide = {
   qrCode?: {
     url: string;
     label?: string;
+    caption?: string;
   };
+  qrCodes?: Array<{
+    url: string;
+    label?: string;
+    caption?: string;
+  }>;
   social?: string;
 };
 
@@ -509,6 +515,29 @@ export const oMitoMobileSlides: PresentationSlide[] = [
   },
   {
     id: 1,
+    type: 'intro',
+    image: '/pedro.JPG',
+    title: "Pedro Goiânia",
+    period: "Quem sou eu",
+    context: {
+      university: "Desenvolvedor de Software",
+      work: "Líder de Comunidade",
+      project: "Fundador Engenharia Inversa"
+    },
+    social: "Instagram/LinkedIn/GitHub: @pedrogoiania",
+    speech: "A velocidade é companheira dos resultados.",
+    bullets: [],
+    learning: "",
+    keyword: "COMPROMISSO COM A PRIORIDADE",
+    qrCode: {
+      url: "/qr/qr-pedrogoiania.svg",
+      label: "Vamos nos conectar",
+      caption: "77a.it/pedrogoiania"
+    },
+    presentationHint: "Foto à esquerda atuando como background que desvanece suavemente. Textos com grande impacto e títulos de peso à direita."
+  },
+  {
+    id: 2,
     image: '/presentation/slide-1.jpg',
     title: "O Que Todo Dev Mobile Precisa Saber",
     period: "O Mínimo Esperado",
@@ -524,7 +553,7 @@ export const oMitoMobileSlides: PresentationSlide[] = [
     presentationHint: "Contraste nítido de quem foca em framework VS engenheiro que foca em fundamentos."
   },
   {
-    id: 2,
+    id: 3,
     image: '/presentation/slide-2.jpg',
     title: "Integração e Resiliência",
     period: "Offline-First",
@@ -540,7 +569,7 @@ export const oMitoMobileSlides: PresentationSlide[] = [
     presentationHint: "Apresentar app que funciona mesmo com a internet caindo. Foco visual em estabilidade."
   },
   {
-    id: 3,
+    id: 4,
     image: '/presentation/slide-3.jpg',
     title: "O Grande Diferencial",
     period: "Publicação",
@@ -556,7 +585,7 @@ export const oMitoMobileSlides: PresentationSlide[] = [
     presentationHint: "Dar foco alarmante no número de '80% não sabem publicar'."
   },
   {
-    id: 4,
+    id: 5,
     image: '/presentation/slide-4.jpg',
     title: "React Native: O Jogo Mudou",
     period: "A Maturidade Adquirida",
@@ -571,7 +600,7 @@ export const oMitoMobileSlides: PresentationSlide[] = [
     presentationHint: "Frase de impacto central: 'React Native deixou de ser gambiarra faz tempo.'"
   },
   {
-    id: 5,
+    id: 6,
     image: '/presentation/slide-5.jpg',
     title: "A Stack do Desenvolvedor Completo",
     period: "O Diferencial Técnico",
@@ -587,7 +616,7 @@ export const oMitoMobileSlides: PresentationSlide[] = [
     presentationHint: "Passar logo por logo bem rápido. Expo, Fastlane, Firebase, NativeWind."
   },
   {
-    id: 6,
+    id: 7,
     image: '/presentation/slide-6.jpg',
     title: "A Grande Oportunidade Oculta",
     period: "O Cenário Atual",
@@ -602,7 +631,7 @@ export const oMitoMobileSlides: PresentationSlide[] = [
     presentationHint: "Focar em como muitos ignoram o óbvio e o dinheiro fica na mesa."
   },
   {
-    id: 7,
+    id: 8,
     image: '/presentation/slide-7.jpg',
     title: "As Novas Regras do Jogo",
     period: "A Transição",
@@ -617,7 +646,7 @@ export const oMitoMobileSlides: PresentationSlide[] = [
     presentationHint: "Encorajar quem está começando e provocar quem está estagnado."
   },
   {
-    id: 8,
+    id: 9,
     type: 'closing',
     image: '/presentation/slide-8.jpg',
     title: "Crie, Publique, Escale Sozinho",
@@ -637,6 +666,33 @@ export const oMitoMobileSlides: PresentationSlide[] = [
     finalQuote: "Hoje você consegue criar, publicar e escalar um app sozinho — coisa que há 5 anos era impossível.",
     keyword: "INDEPENDÊNCIA",
     presentationHint: "Deixar o impacto da frase final e pausar."
+  },
+  {
+    id: 10,
+    type: 'closing',
+    image: '/presentation/conclusion.jpg',
+    title: "Escaneie e Continue",
+    period: "Links",
+    highlight: "Leve com Você",
+    content: {
+      headline: "Escaneie e leve o conteúdo com você.",
+      story: "Aponte a câmera do celular para um dos QR Codes abaixo.",
+      numbers: []
+    },
+    qrCodes: [
+      {
+        url: "/qr/qr-mobile.svg",
+        label: "Mercado Mobile",
+        caption: "77a.it/mobile"
+      },
+      {
+        url: "/qr/qr-eiyt.svg",
+        label: "Engenharia Inversa",
+        caption: "77a.it/eiyt"
+      }
+    ],
+    keyword: "ESCANEIE",
+    presentationHint: "Deixe a lâmina no ar tempo suficiente para todo mundo conseguir escanear."
   }
 ];
 
